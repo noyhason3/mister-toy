@@ -1,0 +1,50 @@
+.time {
+    font-size: 13px;
+    color: #999;
+  }
+  
+  .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+  .button {
+    padding: 0;
+    float: right;
+  }
+
+  .image {
+    width: 100%;
+    display: block;
+  }
+
+  .clearfix:before,
+  .clearfix:after {
+      display: table;
+      content: "";
+  }
+  
+  .clearfix:after {
+      clear: both
+  }
+
+  .el-row{
+    width: 50%;
+  }
+
+
+  .el-button{
+      padding: 6px 10px;
+  }
+
+.removeBtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    /* width: 20px; */
+}
+
+.el-card{
+    position: relative;
+}

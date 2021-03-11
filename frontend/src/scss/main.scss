@@ -1,0 +1,28 @@
+// // SETUP
+@import 'setup/typography';
+@import 'setup/variables';
+@import 'setup/mixins';
+@import 'setup/functions';
+
+// // BASICS
+@import 'basics/helpers';
+@import 'basics/base';
+@import 'basics/layout';
+
+// // COMPONENTS
+// @import 'components/main-header';
+// @import 'components/main-footer';
+// // @import 'components/cat-card';
+@import 'cmps/app';
+@import 'cmps/home';
+@import 'cmps/toy-preview';
+@import 'cmps/toy-list';
+@import 'cmps/toy-filter';
+@import 'cmps/toy-chart';
+@import 'cmps/map';
+@import 'cmps/charts';
+@import 'cmps/toy-edit';
+
+body{
+    /* color:red */
+}

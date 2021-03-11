@@ -1,0 +1,30 @@
+// .toy-list{
+//     width: 90vw;
+//     margin: 0 auto;
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+//     gap: 10px 10px;
+//     font-size: 20px;
+// }
+
+.toy-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(237px, 1fr));
+    grid-auto-rows:  minmax(400px, 1fr);
+    grid-gap: 16px;
+    // grid-auto-flow: dense;
+
+    // grid-auto-rows: 400px;
+
+    > * {
+        @include aspect-ratio(1, 1);
+    }
+
+    // > *:nth-child(3n) {
+    //     grid-row: span 2;
+    // }
+
+    // > *:nth-child(4n) {
+    //     grid-column: span 2;
+    // }
+}
