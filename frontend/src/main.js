@@ -17,7 +17,7 @@ Vue.use(Card)
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyDjPCCo2r93eTDuBsi8kLOinl8n9eLUoW4',
+    key: '',
     libraries: 'places',
   },
 })
