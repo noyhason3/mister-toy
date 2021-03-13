@@ -14,7 +14,19 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
   }
 
+  
+function saveToStorage(key, value) {
+    sessionStorage.setItem(key, JSON.stringify(value) || null);
+}
+
+function loadFromStorage(key) {
+    let data = sessionStorage.getItem(key);
+    return (data) ? JSON.parse(data) : undefined;
+}
+
 export const utilService = {
     makeId,
-    getRandomInt
+    getRandomInt,
+    saveToStorage,
+    loadFromStorage
 }

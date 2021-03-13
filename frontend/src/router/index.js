@@ -5,6 +5,7 @@ import about from '../views/about.vue'
 import toyApp from '../views/toyApp.vue'
 import toyDetails from '../views/toyDetails.vue'
 import toyEdit from '../views/toyEdit.vue'
+import auth from '../views/auth.vue'
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,11 @@ const routes = [
     path: '/about',
     name: 'About',
     component: about
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: auth
   },
   {
     path: '/toy',

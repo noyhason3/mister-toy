@@ -106,7 +106,7 @@ export default {
   },
   computed: {
     filterBy(){
-      return this.$store.state("filterBy")
+      return this.$store.getters.filterBy
     }
   },
   methods: {

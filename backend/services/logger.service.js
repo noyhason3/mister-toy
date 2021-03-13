@@ -40,6 +40,4 @@ module.exports = {
     error(...args) {
         doLog('ERROR', ...args)
     },
-aaa,
-xxx
 }

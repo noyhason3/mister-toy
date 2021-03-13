@@ -1,0 +1,11 @@
+.toy-details{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.657);
+    border-radius: 12px;
+    font-size: 24px;
+    *{
+        margin: 20px;
+    }
+}
+

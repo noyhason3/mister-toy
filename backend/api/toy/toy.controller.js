@@ -38,6 +38,7 @@ async function addToy(req, res) {
 
 async function updateToy(req, res) {
   try {
+    console.log(req.body);
     const toy = req.body
     const savedToy = await toyService.update(toy)
       res.send(savedToy)
@@ -58,12 +59,29 @@ async function deleteToy(req, res) {
   }
 }
 
+async function saveReview(req,res){
+  try{
+    const toyId = req.params.toyId;
+    const review = req.body;
+
+    const toy = await toyService.getById(toyId)
+    toy.reviews.push(review)
+    const savedToy = await toyService.update(toy)
+    res.send(savedToy)
+
+  } catch (err){
+    logger.error('Failed to add review', err)
+    res.status(500).send({ err: 'Failed to add review' })
+  }
+}
+
 module.exports = {
   getToy,
   getToys,
   deleteToy,
   updateToy,
-  addToy
+  addToy,
+  saveReview
 
 };
 

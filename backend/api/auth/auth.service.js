@@ -1,4 +1,4 @@
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcrypt')
 const userService = require('../user/user.service')
 const logger = require('../../services/logger.service')
 
@@ -13,6 +13,7 @@ async function login(username, password) {
     if (!match) return Promise.reject('Invalid username or password')
 
     delete user.password
+    console.log(user);
     return user
 }
 

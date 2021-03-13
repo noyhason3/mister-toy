@@ -73,8 +73,10 @@
 //     }
 // }
 
-import axios from 'axios';
-import { httpService }  from './http.service.js';
+// import axios from 'axios';
+import { httpService } from './http.service.js';
+import { utilService } from './util.service.js';
+const TOY_URL = 'toy/';
 
 // const TOY_URL = (process.env.NODE_ENV !== 'development')
 //  ? '/api/toy/'
@@ -86,10 +88,11 @@ export const toyService = {
   save,
   getById,
   getEmptyToy,
+  saveReview,
 };
 
 function getById(toyId) {
-  return axios.get(TOY_URL + toyId).then((res) => res.data);
+  return httpService.get(TOY_URL + toyId);
 }
 
 function getEmptyToy() {
@@ -103,25 +106,32 @@ function getEmptyToy() {
 }
 
 function query(filterBy) {
-  return httpService.get('toy', {params: filterBy})
+  return httpService.get(TOY_URL, { params: filterBy });
   // const toys = httpService.get('toy', {params: filterBy})
   // console.log(toys);
   // return toys
 }
-
 
 // function query() {
 //   return axios.get(TOY_URL).then(({ data }) => data);
 // }
 
 function remove(id) {
-  return axios.delete(TOY_URL + id).then(({ data }) => console.log(data));
+  return httpService.delete(TOY_URL + id);
 }
+// function remove(id) {
+//   return axios.delete(TOY_URL + id).then(({ data }) => console.log(data));
+// }
 
 function save(toy) {
   if (toy._id) {
-    return axios.put(TOY_URL + toy._id, toy).then(({ data }) => data);
+    return httpService.put(TOY_URL + toy._id, toy);
   } else {
-    return axios.post(TOY_URL, toy).then(({ data }) => data);
+    return httpService.post(TOY_URL, toy);
   }
+}
+
+function saveReview(toyId, review) {
+  review._id = utilService.makeId();
+  return httpService.post(TOY_URL + toyId + '/review', review);
 }
