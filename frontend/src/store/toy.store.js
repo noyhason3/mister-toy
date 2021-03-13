@@ -16,9 +16,7 @@ export const toyStore = {
   },
   getters:{
     toysToDisplay: (state) => state.toys,
-    filterBy(state){
-      return state.filterBy
-    },
+    filterBy : (state) =>  state.filterBy
   },
   mutations: {
     setToys(state,{toys}){
@@ -96,8 +94,6 @@ export const toyStore = {
       },
   },
   created(){
-    //  this.$store.dispatch({type:'loadToys'})
-    //  this.$store.commit({type:'setLoggedinUser'})
   },
   modules: {
   }

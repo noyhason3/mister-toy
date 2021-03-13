@@ -9,9 +9,7 @@ export const userStore = {
     loggedinUser: null,
   },
   getters:{
-    loggedinUser(state){
-      return state.loggedinUser
-    }
+    loggedinUser : (state)=> state.loggedinUser
   },
   mutations: {
     login(state, {user}){
@@ -48,8 +46,6 @@ export const userStore = {
 
   },
   created(){
-    //  this.$store.dispatch({type:'loadToys'})
-    //  this.$store.commit({type:'setLoggedinUser'})
   },
   modules: {
   }
