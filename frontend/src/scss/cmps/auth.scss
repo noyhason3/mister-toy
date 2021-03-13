@@ -1,0 +1,59 @@
+.signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+
+        input{
+            padding: 10px;
+            font-size: large;
+        }
+        
+        *{
+            font-size: large;
+            margin: 5px;
+        }
+
+        button{
+            cursor: pointer;
+        }
+    }
+}
+
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+
+        input{
+            padding: 10px;
+            font-size: large;
+        }
+        
+        *{
+            font-size: large;
+            margin: 5px;
+        }
+        button{
+            cursor: pointer;
+        }
+    }
+}
+
+

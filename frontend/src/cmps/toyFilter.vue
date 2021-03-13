@@ -7,30 +7,6 @@
       @input="setFilterBy"
     />
 
-    <!-- <input
-      type="search"
-      list="filterByStock"
-      v-model="filterBy.stock"
-      @change="setFilterBy"
-    /> -->
-    <!-- <datalist id="filterByStock">
-      <option value="All" />
-      <option value="Stock" />
-      <option value="Out" />
-    </datalist> -->
-<!-- 
-    <input
-      type="search"
-      list="filterByType"
-      v-model="filterBy.type"
-      @change="setFilterBy"
-    /> -->
-    <!-- <datalist id="filterByType">
-      <option value="All" />
-      <option value="Funny" />
-      <option value="Girls" />
-      <option value="Mechanism" />
-    </datalist> -->
     <datalist  class=" input" id="sortBy">
       <option value="Name" />
       <option value="Price" />

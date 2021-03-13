@@ -5,7 +5,7 @@
       <button @click="logout">logout..</button>
     </section>
 
-    <section class="hello-guest" v-if="!isSignupOpen && !loggedinUser">
+    <section v-if="!isSignupOpen && !loggedinUser" class="login" >
       <h1>Hello Guest!</h1>
       <form @submit.prevent="login">
         <input
@@ -26,7 +26,7 @@
 
     </section>
     <section  v-if="isSignupOpen && !loggedinUser" class="signup">
-      <h1>signup!</h1>
+      <h1>Signup!</h1>
       <form @submit.prevent="signup">
         <input type="text" placeholder="fullname" v-model="newUser.fullname" />
         <input type="text" placeholder="username" v-model="newUser.username" />

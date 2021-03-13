@@ -68,6 +68,7 @@ export const toyStore = {
       //     throw err;
       //   }
       // })
+      console.log(filterBy);
      toyService.query(filterBy)
         .then((toys)=>{
           commit({type:'setToys', toys})

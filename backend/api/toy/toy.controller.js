@@ -5,7 +5,9 @@ const logger = require('../../services/logger.service')
 
 async function getToys(req, res) {
   try{
-      const toys = await toyService.query()
+    console.log(req.params);
+      const filterBy = req.body
+      const toys = await toyService.query(filterBy)
       res.json(toys)
   } catch (err){
     logger.error('Failed to get toys', err)
@@ -84,33 +86,4 @@ module.exports = {
   saveReview
 
 };
-
-
-
-// router.put('/:toyId', (req, res) => {
-//   const toy = req.body;
-
-//   toyService.save(toy).then((savedToy) => {
-//     res.json(savedToy);
-//   });
-// });
-
-// router.delete('/:toyId', (req, res) => {
-
-//   const toyId = req.params.toyId;
-//   console.log(toyId);
-//   toyService
-//     .remove(toyId)
-//     .then(() => {
-//       return res.json('toy is deleted');
-//     })
-//     .catch((err) =>
-//       res.status(401).send("you cant update another person's car!")
-//     );
-// });
-
-
-
-
-
 
